@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Design by foolishdeveloper.com -->
+    <title>Login Tutorial</title>
+
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+
+    <!--Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    {%if alert%}
+        <div class="alert alert-danger">
+            <strong>Errore:</strong> {{ alert }}
+        </div>
+    {% endif %}
+            
+
+    <form action="/" method="POST">
+        <h3>Login Here</h3>
+
+        <label for="e-mail">Email</label>
+        <input type="email" placeholder="Email" id="e-mail" name="e-mail" required>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password" name="password" required>
+
+        <button type="submit">Log In</button>
+
+        <div class="social">
+            <div class="go"><i class="fab fa-google"></i> Google</div>
+            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+        </div>
+
+    </form>
+    <a href="/create_account" class="create-account-link">
+        <button type="button" class="create-account">Create Account</button>
+    </a>
+
+</body>
+
+</html>
+
+
+<!-- app.py 
+Pagina login
+
+concontrollo DB: id | mail | passw 
+    return redirect(url_for('home'))
+
+altrimenti:
+return render_template('login.html', error='Invalid username or password')
+pagina home
+    -->
