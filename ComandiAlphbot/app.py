@@ -8,8 +8,6 @@ import sqlite3 as sql
 app = Flask(__name__)
 global username_global
 
-app = Flask(__name__)
-
 a = AlphaBot()
 a.stop()
 
