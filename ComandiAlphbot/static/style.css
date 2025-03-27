@@ -51,15 +51,10 @@ form {
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
   padding: 50px 35px;
-  margin-bottom: 20px; /* Spazio tra i form */
-}
-
-form * {
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  outline: none;
-  border: none;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form h3 {
@@ -69,27 +64,57 @@ form h3 {
   text-align: center;
 }
 
-label {
-  display: block;
-  margin-top: 30px;
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.btn-comando {
+  width: 120px;  /* Cambiato per renderlo più largo */
+  height: 50px;  /* Cambiato per rendere il pulsante più rettangolare */
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px; /* Bordo rettangolare con angoli smussati */
+  color: #fff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
 }
 
-input {
-  display: block;
+.btn-comando:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-comando:active {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Disposizione a croce dei pulsanti */
+.row:first-child {
+  margin-bottom: 20px;
+}
+
+.row:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+form .center-btn {
+  width: 120px;  /* Cambiato per mantenere la coerenza con i pulsanti */
   height: 50px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.07);
-  border-radius: 3px;
-  padding: 0 10px;
-  margin-top: 8px;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-::placeholder {
-  color: #e5e5e5;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  margin: 10px;
 }
 
 button {
@@ -102,33 +127,6 @@ button {
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.social {
-  margin-top: 30px;
-  display: flex;
-}
-
-.social div {
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255, 255, 255, 0.27);
-  color: #eaf0fb;
-  text-align: center;
-}
-
-.social div:hover {
-  background-color: rgba(255, 255, 255, 0.47);
-}
-
-.social .fb {
-  margin-left: 25px;
-}
-
-.social i {
-  margin-right: 4px;
 }
 
 .create-account {
@@ -147,37 +145,5 @@ button {
 }
 
 .create-account:hover {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.alert {
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  position: relative;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-/* Successo (verde) */
-.alert-success {
-  background-color: #4CAF50; /* Verde */
-}
-
-/* Errore (rosso) */
-.alert-danger {
-  background-color: #f44336; /* Rosso */
-}
-
-/* Avvertimento (giallo) */
-.alert-warning {
-  background-color: #ff9800; /* Arancione */
-  color: #fff;
-}
-
-/* Informazione (blu) */
-.alert-info {
-  background-color: #2196F3; /* Blu */
+  background-color: rgba(255, 255, 255, 0.8);
 }
